@@ -1,6 +1,6 @@
 # Playwright | Demo Login Test
 ## Instalación
-# Puertos requeridos
+### Puertos requeridos
 - 3000 - Servidor web
 - 5432 - PostgreSQL
 - 9323 - Reporte de pruebas
