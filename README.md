@@ -1,5 +1,4 @@
 # Playwright | Demo Login Test
-
 ## Instalación
 # Puertos requeridos
 - 3000 - Servidor web
