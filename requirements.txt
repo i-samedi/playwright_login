@@ -32,3 +32,10 @@ DB_NAME=test
 # 5432 - PostgreSQL
 # 9323 - Reporte de pruebas
 
+# Primero, instala las dependencias de Node.js:
+# npm install express pg cors
+# npm install -D @playwright/test @types/node
+
+# Instala Playwright y sus dependencias:
+# npx playwright install
+# npx playwright install-deps
