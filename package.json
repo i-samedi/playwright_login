@@ -1,0 +1,24 @@
+{
+  "name": "login-postgres",
+  "version": "1.0.0",
+  "description": "Login system with PostgreSQL",
+  "main": "login.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright test && node test/generateReport.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
