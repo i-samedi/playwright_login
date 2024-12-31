@@ -69,17 +69,15 @@
   },
   "suites": [
     {
-      "title": "loginDemo.spec.js",
-      "file": "loginDemo.spec.js",
+      "title": "loginDemo2.spec.js",
+      "file": "loginDemo2.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Login test for user Dynah (dblanckley0@msn.com)",
+          "title": "login exitoso",
           "ok": true,
-          "tags": [
-            "msn.com)"
-          ],
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -91,17 +89,17 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 2107,
+                  "duration": 1946,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-30T16:36:49.857Z",
+                  "startTime": "2024-12-31T11:45:54.428Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Dynah-dblanckley0-msn-com--chromium/test-finished-1.png"
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-exitoso-chromium/test-finished-1.png"
                     }
                   ]
                 }
@@ -109,17 +107,15 @@
               "status": "expected"
             }
           ],
-          "id": "a17d344665b7769027ce-138eab07af298ae432e4",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
+          "id": "53707008e07706c1acea-653c8f0e6fabb0c4ed4d",
+          "file": "loginDemo2.spec.js",
+          "line": 4,
+          "column": 5
         },
         {
-          "title": "Login test for user Sigismund (svigneron2@merriam-webster.com)",
-          "ok": true,
-          "tags": [
-            "merriam-webster.com)"
-          ],
+          "title": "login con credenciales incorrectas",
+          "ok": false,
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -130,36 +126,143 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 2309,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 7039,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:21:50",
+                    "matcherResult": {
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n",
+                      "pass": false,
+                      "actual": "hidden",
+                      "name": "toBeVisible",
+                      "expected": "visible",
+                      "log": [
+                        "  - expect.toBeVisible with timeout 5000ms",
+                        "  - waiting for locator('.error-message')"
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 50,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m     \n \u001b[90m 20 |\u001b[39m     \u001b[90m// Verifica que aparezca un mensaje de error\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Verifica que seguimos en la página de login\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'http://localhost:3000'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 50,
+                        "line": 21
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n\n\n\u001b[0m \u001b[90m 19 |\u001b[39m     \n \u001b[90m 20 |\u001b[39m     \u001b[90m// Verifica que aparezca un mensaje de error\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Verifica que seguimos en la página de login\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'http://localhost:3000'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:21:50\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-30T16:36:49.859Z",
+                  "startTime": "2024-12-31T11:45:54.433Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-f5d55-neron2-merriam-webster-com--chromium/test-finished-1.png"
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-credenciales-incorrectas-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-credenciales-incorrectas-chromium/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-credenciales-incorrectas-chromium/trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 50,
+                    "line": 21
+                  }
+                },
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 6600,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:21:50",
+                    "matcherResult": {
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n",
+                      "pass": false,
+                      "actual": "hidden",
+                      "name": "toBeVisible",
+                      "expected": "visible",
+                      "log": [
+                        "  - expect.toBeVisible with timeout 5000ms",
+                        "  - waiting for locator('.error-message')"
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 50,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m     \n \u001b[90m 20 |\u001b[39m     \u001b[90m// Verifica que aparezca un mensaje de error\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Verifica que seguimos en la página de login\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'http://localhost:3000'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 50,
+                        "line": 21
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.error-message')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.error-message')\u001b[22m\n\n\n\u001b[0m \u001b[90m 19 |\u001b[39m     \n \u001b[90m 20 |\u001b[39m     \u001b[90m// Verifica que aparezca un mensaje de error\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.error-message'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Verifica que seguimos en la página de login\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'http://localhost:3000'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:21:50\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2024-12-31T11:46:03.613Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-credenciales-incorrectas-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-credenciales-incorrectas-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-credenciales-incorrectas-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 50,
+                    "line": 21
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "a17d344665b7769027ce-a3351c2ce2e5ee6e3261",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
+          "id": "53707008e07706c1acea-721a34eb4b3b3b18fbff",
+          "file": "loginDemo2.spec.js",
+          "line": 14,
+          "column": 5
         },
         {
-          "title": "Login test for user Ina (ibesnardeau3@chronoengine.com)",
-          "ok": true,
-          "tags": [
-            "chronoengine.com)"
-          ],
+          "title": "login con email inválido",
+          "ok": false,
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -170,36 +273,147 @@
               "results": [
                 {
                   "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 2108,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 6899,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:34:75",
+                    "matcherResult": {
+                      "name": "toHaveAttribute",
+                      "expected": "true",
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                      "pass": false,
+                      "actual": null,
+                      "log": [
+                        "  - expect.toHaveAttribute with timeout 5000ms",
+                        "  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')",
+                        "    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>",
+                        "      - unexpected value \"null\""
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 75,
+                      "line": 34
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m     \n \u001b[90m 33 |\u001b[39m     \u001b[90m// Verifica la validación del formato de email\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m \u001b[90m// Caso: campos vacíos\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 75,
+                        "line": 34
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m     \n \u001b[90m 33 |\u001b[39m     \u001b[90m// Verifica la validación del formato de email\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m \u001b[90m// Caso: campos vacíos\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:34:75\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-30T16:36:49.862Z",
+                  "startTime": "2024-12-31T11:45:54.445Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-5aa0d-snardeau3-chronoengine-com--chromium/test-finished-1.png"
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-email-inválido-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-email-inválido-chromium/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-email-inválido-chromium/trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 75,
+                    "line": 34
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "status": "failed",
+                  "duration": 6209,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:34:75",
+                    "matcherResult": {
+                      "name": "toHaveAttribute",
+                      "expected": "true",
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                      "pass": false,
+                      "actual": null,
+                      "log": [
+                        "  - expect.toHaveAttribute with timeout 5000ms",
+                        "  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')",
+                        "    8 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>",
+                        "      - unexpected value \"null\""
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 75,
+                      "line": 34
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 32 |\u001b[39m     \n \u001b[90m 33 |\u001b[39m     \u001b[90m// Verifica la validación del formato de email\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m \u001b[90m// Caso: campos vacíos\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 75,
+                        "line": 34
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    8 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 32 |\u001b[39m     \n \u001b[90m 33 |\u001b[39m     \u001b[90m// Verifica la validación del formato de email\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m \u001b[90m// Caso: campos vacíos\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:34:75\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2024-12-31T11:46:03.619Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-email-inválido-chromium-retry1/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-email-inválido-chromium-retry1/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-email-inválido-chromium-retry1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 75,
+                    "line": 34
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "a17d344665b7769027ce-457c0dc04d9d9ce9c2fd",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
+          "id": "53707008e07706c1acea-c914223864f1b920a542",
+          "file": "loginDemo2.spec.js",
+          "line": 27,
+          "column": 5
         },
         {
-          "title": "Login test for user Garvy (gknighton4@tinyurl.com)",
-          "ok": true,
-          "tags": [
-            "tinyurl.com)"
-          ],
+          "title": "login con campos vacíos",
+          "ok": false,
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -210,2956 +424,147 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1501,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:52.807Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Garvy-gknighton4-tinyurl-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-0a245ba39fa94fb6d255",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Archaimbaud (adripps7@ycombinator.com)",
-          "ok": true,
-          "tags": [
-            "ycombinator.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1505,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:52.807Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-f1173-d-adripps7-ycombinator-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ce4ddae0ae3151be7271",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Logan (lbrim8@ft.com)",
-          "ok": true,
-          "tags": [
-            "ft.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1465,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:53.022Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Logan-lbrim8-ft-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-71111ed929a1af6844fc",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Marlyn (mlofts9@blogtalkradio.com)",
-          "ok": true,
-          "tags": [
-            "blogtalkradio.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1406,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:54.313Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-72387--mlofts9-blogtalkradio-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-00865e8c71fa0d7002b7",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Alberik (awellsa@4shared.com)",
-          "ok": true,
-          "tags": [
-            "4shared.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1527,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:54.316Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Alberik-awellsa-4shared-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-89196890ac14dfc7a1c1",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Nathalie (nknokb@netlog.com)",
-          "ok": true,
-          "tags": [
-            "netlog.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1500,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:54.493Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Nathalie-nknokb-netlog-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-8987a348628f11e42c68",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Randa (rballchind@tumblr.com)",
-          "ok": true,
-          "tags": [
-            "tumblr.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1416,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:55.726Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Randa-rballchind-tumblr-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-b9013bdafb5e75d2173b",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Pauline (pshewerye@tripod.com)",
-          "ok": true,
-          "tags": [
-            "tripod.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1441,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:55.847Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Pauline-pshewerye-tripod-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-473844444d0649f8763a",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Humbert (haggef@comcast.net)",
-          "ok": true,
-          "tags": [
-            "comcast.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1360,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:55.997Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Humbert-haggef-comcast-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-2ae26277be8e2f7e97c7",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Suki (sputsonh@netscape.com)",
-          "ok": true,
-          "tags": [
-            "netscape.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1417,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:57.151Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Suki-sputsonh-netscape-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-43378078caa9d85c3cbf",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Wye (wbrouj@wiley.com)",
-          "ok": true,
-          "tags": [
-            "wiley.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1407,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:57.293Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Wye-wbrouj-wiley-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-40dacdca2ac863e0c6eb",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Stephine (slovingk@cbsnews.com)",
-          "ok": true,
-          "tags": [
-            "cbsnews.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1401,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:57.362Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Stephine-slovingk-cbsnews-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ff9e1809c587a10f1aa5",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Zed (zwatersl@sfgate.com)",
-          "ok": true,
-          "tags": [
-            "sfgate.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1421,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:58.572Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Zed-zwatersl-sfgate-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-590046bf8379c0444d44",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Elva (esoanm@telegraph.co.uk)",
-          "ok": true,
-          "tags": [
-            "telegraph.co.uk)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1422,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:58.704Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Elva-esoanm-telegraph-co-uk--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ce604f8a4f08dda28da4",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Taite (tlettso@myspace.com)",
-          "ok": true,
-          "tags": [
-            "myspace.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1372,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:58.771Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Taite-tlettso-myspace-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-e45b55d2d9f1fbce8cfd",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Burlie (boxtonp@naver.com)",
-          "ok": true,
-          "tags": [
-            "naver.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1416,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:36:59.996Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Burlie-boxtonp-naver-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-58f0a2c0107185c29e3b",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Kylen (klallyq@bbb.org)",
-          "ok": true,
-          "tags": [
-            "bbb.org)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1418,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:00.131Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Kylen-klallyq-bbb-org--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-c1fdcc0b5427935451e6",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Dolf (dfontr@angelfire.com)",
-          "ok": true,
-          "tags": [
-            "angelfire.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1420,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:00.148Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Dolf-dfontr-angelfire-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-23c4dc82785fe163e4e1",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Martyn (mhingeleys@reddit.com)",
-          "ok": true,
-          "tags": [
-            "reddit.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1425,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:01.417Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Martyn-mhingeleys-reddit-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-24497b32b2358c56021f",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Fifi (fperkist@fda.gov)",
-          "ok": true,
-          "tags": [
-            "fda.gov)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1474,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:01.554Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Fifi-fperkist-fda-gov--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-b60fda1b80efa450498f",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Alanah (aahearneu@wired.com)",
-          "ok": true,
-          "tags": [
-            "wired.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1528,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:01.576Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Alanah-aahearneu-wired-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-cf022370ba0723b5de67",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Phaidra (psonv@earthlink.net)",
-          "ok": true,
-          "tags": [
-            "earthlink.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1475,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:02.845Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Phaidra-psonv-earthlink-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-531fb001b08ca9faa5ef",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Byron (bgehringerw@phpbb.com)",
-          "ok": true,
-          "tags": [
-            "phpbb.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1437,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:03.031Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Byron-bgehringerw-phpbb-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-65fe4fa98768c791fde9",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Ezmeralda (ekellardx@yolasite.com)",
-          "ok": true,
-          "tags": [
-            "yolasite.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1414,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:03.109Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-474b5-lda-ekellardx-yolasite-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-d989aa08e87572bc943e",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Edith (egoddmany@comcast.net)",
-          "ok": true,
-          "tags": [
-            "comcast.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1427,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:04.326Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Edith-egoddmany-comcast-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ae991b655253450b1ec6",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Theo (teastabrookz@google.co.uk)",
-          "ok": true,
-          "tags": [
-            "google.co.uk)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1429,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:04.472Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-1d8c0--teastabrookz-google-co-uk--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-1ef3b70a0f0b17399b75",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Dominga (dzeale11@salon.com)",
-          "ok": true,
-          "tags": [
-            "salon.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1414,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:04.535Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Dominga-dzeale11-salon-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-16d9363dfa962360a7c1",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Asia (apietroni13@ucsd.edu)",
-          "ok": true,
-          "tags": [
-            "ucsd.edu)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1412,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:05.756Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Asia-apietroni13-ucsd-edu--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-138444847ff2c9cd210c",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Newton (njancar14@tumblr.com)",
-          "ok": true,
-          "tags": [
-            "tumblr.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1403,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:05.905Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Newton-njancar14-tumblr-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-4ba01af971b6c874f71a",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Abby (atottle15@disqus.com)",
-          "ok": true,
-          "tags": [
-            "disqus.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1433,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:05.954Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Abby-atottle15-disqus-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-048fd125fed804d97302",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Danit (dbaress16@about.me)",
-          "ok": true,
-          "tags": [
-            "about.me)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1434,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:07.173Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Danit-dbaress16-about-me--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-899e132d99933748f6af",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Ellis (efatkin17@census.gov)",
-          "ok": true,
-          "tags": [
-            "census.gov)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1426,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:07.311Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Ellis-efatkin17-census-gov--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-9152c55e46a98eab4cce",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Quincey (qbarnish18@about.com)",
-          "ok": true,
-          "tags": [
-            "about.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1374,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:07.392Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Quincey-qbarnish18-about-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-d1f007bc89a21435cae9",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Karoline (kkullmann19@goo.ne.jp)",
-          "ok": true,
-          "tags": [
-            "goo.ne.jp)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1416,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:08.612Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-95d62-line-kkullmann19-goo-ne-jp--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-43080d98b2a503e59bb1",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Amalee (amanon1a@vinaora.com)",
-          "ok": true,
-          "tags": [
-            "vinaora.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1462,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:08.741Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Amalee-amanon1a-vinaora-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-0bd3ba32635032199344",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Debbi (dstuke1c@comcast.net)",
-          "ok": true,
-          "tags": [
-            "comcast.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1582,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:08.773Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Debbi-dstuke1c-comcast-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-3c69bc72744491ae21b8",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Twila (tkeward1e@sohu.com)",
-          "ok": true,
-          "tags": [
-            "sohu.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1509,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:10.031Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Twila-tkeward1e-sohu-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-7e7ba7cfe66934edf771",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Chelsae (cverlinden1f@salon.com)",
-          "ok": true,
-          "tags": [
-            "salon.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1565,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:10.208Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-289fe-sae-cverlinden1f-salon-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-d4d576b95250c063cacd",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Madalyn (mmcaughtrie1g@apache.org)",
-          "ok": true,
-          "tags": [
-            "apache.org)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1490,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:10.360Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-a70a3-n-mmcaughtrie1g-apache-org--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-f3590ab99a4d04e30f96",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Knox (kvarley1i@usda.gov)",
-          "ok": true,
-          "tags": [
-            "usda.gov)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1592,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:11.545Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Knox-kvarley1i-usda-gov--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-5d623ef0b50d199a1783",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Shannon (sswinfon1j@ameblo.jp)",
-          "ok": true,
-          "tags": [
-            "ameblo.jp)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1607,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:11.776Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Shannon-sswinfon1j-ameblo-jp--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-d44228aac2f0d2de86b4",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Shirlee (sdybell1k@columbia.edu)",
-          "ok": true,
-          "tags": [
-            "columbia.edu)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1533,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:11.856Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-f76d2-lee-sdybell1k-columbia-edu--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-b3906b5acd0801d3d3f8",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Lian (lwelldrake1m@freewebs.com)",
-          "ok": true,
-          "tags": [
-            "freewebs.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1588,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:13.152Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-f8b49--lwelldrake1m-freewebs-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-b47d11d4d4ce14d500b7",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Dorothea (dimpleton1n@rakuten.co.jp)",
-          "ok": true,
-          "tags": [
-            "rakuten.co.jp)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1568,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:13.386Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-e09e9--dimpleton1n-rakuten-co-jp--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-458aab0efc3debbf8421",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Batholomew (bmcpeeters1o@latimes.com)",
-          "ok": true,
-          "tags": [
-            "latimes.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1461,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:13.392Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-bd408-w-bmcpeeters1o-latimes-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-238a1acf18d8943cb9ee",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Godfrey (ggunther1p@ask.com)",
-          "ok": true,
-          "tags": [
-            "ask.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1497,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:14.748Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Godfrey-ggunther1p-ask-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-6263ee0c6e687464c399",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Annetta (amathivat1q@ustream.tv)",
-          "ok": true,
-          "tags": [
-            "ustream.tv)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1493,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:14.856Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-04622-tta-amathivat1q-ustream-tv--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-550d3963c6cb7d3fa168",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Christiana (chowood1r@twitter.com)",
-          "ok": true,
-          "tags": [
-            "twitter.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1491,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:14.958Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-7ce70-iana-chowood1r-twitter-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-7a2493e59cae2a79b09c",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Elvira (ematusiak1s@washingtonpost.com)",
-          "ok": true,
-          "tags": [
-            "washingtonpost.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1492,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:16.248Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-e6f80-usiak1s-washingtonpost-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ec088381786438429064",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Isador (ipurrington1t@flavors.me)",
-          "ok": true,
-          "tags": [
-            "flavors.me)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1471,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:16.355Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-58108-r-ipurrington1t-flavors-me--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-5d46cf2a1581e6017e9f",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Seline (scheckley1u@themeforest.net)",
-          "ok": true,
-          "tags": [
-            "themeforest.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1482,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:16.456Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-775fe-checkley1u-themeforest-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-06297f3aefb5c7c50d83",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Austin (adaville1v@nhs.uk)",
-          "ok": true,
-          "tags": [
-            "nhs.uk)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1363,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:17.745Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Austin-adaville1v-nhs-uk--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-c20f7d68a64d9062dfb2",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Marshal (mtole1w@cloudflare.com)",
-          "ok": true,
-          "tags": [
-            "cloudflare.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1431,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:17.830Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-1eacc-hal-mtole1w-cloudflare-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-b348c7d1ac1aedc88830",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Arda (abrownsett1x@seesaa.net)",
-          "ok": true,
-          "tags": [
-            "seesaa.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1496,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:17.947Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Arda-abrownsett1x-seesaa-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-82c35eee1e0e1ee033c4",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Adelind (aalfonsetto1y@diigo.com)",
-          "ok": true,
-          "tags": [
-            "diigo.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1376,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:19.111Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-6fc66-nd-aalfonsetto1y-diigo-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-4dd5b46f1ea0a32e00e5",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Berget (bpruce1z@nature.com)",
-          "ok": true,
-          "tags": [
-            "nature.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1463,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:19.264Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Berget-bpruce1z-nature-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-fbe3e27ef54921c6297a",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Hally (hgosforth20@blogs.com)",
-          "ok": true,
-          "tags": [
-            "blogs.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1484,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:19.449Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Hally-hgosforth20-blogs-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-f214ad7e4e29f4c74f22",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Odie (owightman21@gizmodo.com)",
-          "ok": true,
-          "tags": [
-            "gizmodo.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1452,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:20.490Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Odie-owightman21-gizmodo-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ad653527d4243f43ee6b",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Vikky (vellaway22@qq.com)",
-          "ok": true,
-          "tags": [
-            "qq.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1418,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:20.731Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Vikky-vellaway22-qq-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-ad5d44ff4130fc917aee",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Catharina (cgirt23@shinystat.com)",
-          "ok": true,
-          "tags": [
-            "shinystat.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1378,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:20.936Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-41db6-rina-cgirt23-shinystat-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-c0fcbe837a85a0b8db60",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Sherwood (smcgready24@geocities.com)",
-          "ok": true,
-          "tags": [
-            "geocities.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1397,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:21.946Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-51f9a--smcgready24-geocities-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-7a73261343b319f7b088",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Lilllie (lchandler25@printfriendly.com)",
-          "ok": true,
-          "tags": [
-            "printfriendly.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1398,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:22.152Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-34ef7-andler25-printfriendly-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-f294b6dff43cfa577a0e",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Raynard (rfollet26@edublogs.org)",
-          "ok": true,
-          "tags": [
-            "edublogs.org)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1368,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:22.318Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-d98e9-ard-rfollet26-edublogs-org--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-aa3c4650cda66b1d0429",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Amandi (ashearmer27@tiny.cc)",
-          "ok": true,
-          "tags": [
-            "tiny.cc)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1516,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:23.346Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Amandi-ashearmer27-tiny-cc--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-22a6555008a24b05ec7a",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Ara (adenney28@google.it)",
-          "ok": true,
-          "tags": [
-            "google.it)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1458,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:23.554Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Ara-adenney28-google-it--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-7a826ba4c067d522a8d5",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Bernard (bmckinnon29@tmall.com)",
-          "ok": true,
-          "tags": [
-            "tmall.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1471,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:23.690Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Bernard-bmckinnon29-tmall-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-7baa2ff247ebcfa472d5",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Lukas (lhaxell2b@jugem.jp)",
-          "ok": true,
-          "tags": [
-            "jugem.jp)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1389,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:24.865Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Lukas-lhaxell2b-jugem-jp--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-bcf5631608df83361b05",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Hilde (hpepye2c@mysql.com)",
-          "ok": true,
-          "tags": [
-            "mysql.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1444,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:25.015Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Hilde-hpepye2c-mysql-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-4a40678c78f1bdddf68c",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Jozef (jaleixo2d@php.net)",
-          "ok": true,
-          "tags": [
-            "php.net)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1417,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:25.167Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Jozef-jaleixo2d-php-net--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-047cf92faea08a1732a0",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Allayne (aorleton2e@psu.edu)",
-          "ok": true,
-          "tags": [
-            "psu.edu)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1431,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:26.261Z",
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Allayne-aorleton2e-psu-edu--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-7d4795f64a02ddd19059",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Joelle (jtezure2f@psu.edu)",
-          "ok": true,
-          "tags": [
-            "psu.edu)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1376,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:26.462Z",
-                  "attachments": [
+                  "status": "failed",
+                  "duration": 5937,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:43:75",
+                    "matcherResult": {
+                      "name": "toHaveAttribute",
+                      "expected": "true",
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                      "pass": false,
+                      "actual": null,
+                      "log": [
+                        "  - expect.toHaveAttribute with timeout 5000ms",
+                        "  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')",
+                        "    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>",
+                        "      - unexpected value \"null\""
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 75,
+                      "line": 43
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 41 |\u001b[39m     \n \u001b[90m 42 |\u001b[39m     \u001b[90m// Verifica que aparezcan mensajes de campos requeridos\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 75,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \n \u001b[90m 42 |\u001b[39m     \u001b[90m// Verifica que aparezcan mensajes de campos requeridos\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:43:75\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-31T11:45:57.829Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-campos-vacíos-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-campos-vacíos-chromium/video.webm"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Joelle-jtezure2f-psu-edu--chromium/test-finished-1.png"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-campos-vacíos-chromium/trace.zip"
                     }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-208a8ee9ec899b975197",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Gunner (gburkart2g@theatlantic.com)",
-          "ok": true,
-          "tags": [
-            "theatlantic.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1419,
-                  "errors": [],
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 75,
+                    "line": 43
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "status": "failed",
+                  "duration": 6557,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:43:75",
+                    "matcherResult": {
+                      "name": "toHaveAttribute",
+                      "expected": "true",
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                      "pass": false,
+                      "actual": null,
+                      "log": [
+                        "  - expect.toHaveAttribute with timeout 5000ms",
+                        "  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')",
+                        "    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>",
+                        "      - unexpected value \"null\""
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 75,
+                      "line": 43
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 41 |\u001b[39m     \n \u001b[90m 42 |\u001b[39m     \u001b[90m// Verifica que aparezcan mensajes de campos requeridos\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 75,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"nombre@ejemplo.com\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"nombre@ejemplo.com\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"email\" id=\"floatingEmail\" class=\"form-control\" placeholder=\"nombre@ejemplo.com\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \n \u001b[90m 42 |\u001b[39m     \u001b[90m// Verifica que aparezcan mensajes de campos requeridos\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"nombre@ejemplo.com\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:43:75\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:26.587Z",
+                  "retry": 1,
+                  "startTime": "2024-12-31T11:46:05.415Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-8fe38-gburkart2g-theatlantic-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-de4c55f38295f07c63ec",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Beniamino (beaklee2h@cyberchimps.com)",
-          "ok": true,
-          "tags": [
-            "cyberchimps.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1394,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:27.696Z",
-                  "attachments": [
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-campos-vacíos-chromium-retry1/test-failed-1.png"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-379ae--beaklee2h-cyberchimps-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-61ae2c0de7a9021c92be",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Dermot (dahlf2i@rediff.com)",
-          "ok": true,
-          "tags": [
-            "rediff.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1405,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:27.843Z",
-                  "attachments": [
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-campos-vacíos-chromium-retry1/video.webm"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Dermot-dahlf2i-rediff-com--chromium/test-finished-1.png"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-campos-vacíos-chromium-retry1/trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 75,
+                    "line": 43
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "a17d344665b7769027ce-d54f407087fa231c5fb1",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
+          "id": "53707008e07706c1acea-6c3ad7d33d98b7c1a7e5",
+          "file": "loginDemo2.spec.js",
+          "line": 38,
+          "column": 5
         },
         {
-          "title": "Login test for user Carolann (cweymouth2j@edublogs.org)",
-          "ok": true,
-          "tags": [
-            "edublogs.org)"
-          ],
+          "title": "login con contraseña muy corta",
+          "ok": false,
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -3169,321 +574,154 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1418,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:28.010Z",
-                  "attachments": [
+                  "workerIndex": 6,
+                  "status": "failed",
+                  "duration": 6197,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:55:67",
+                    "matcherResult": {
+                      "name": "toHaveAttribute",
+                      "expected": "true",
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                      "pass": false,
+                      "actual": null,
+                      "log": [
+                        "  - expect.toHaveAttribute with timeout 5000ms",
+                        "  - waiting for locator('input[placeholder=\"Contraseña\"]')",
+                        "    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>",
+                        "      - unexpected value \"null\""
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 67,
+                      "line": 55
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 53 |\u001b[39m     \n \u001b[90m 54 |\u001b[39m     \u001b[90m// Verifica mensaje de error de contraseña\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-080c2-n-cweymouth2j-edublogs-org--chromium/test-finished-1.png"
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 67,
+                        "line": 55
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 53 |\u001b[39m     \n \u001b[90m 54 |\u001b[39m     \u001b[90m// Verifica mensaje de error de contraseña\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:55:67\u001b[22m"
                     }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-e6eeff8315e1f89fdff3",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Anderea (abridgwater2k@booking.com)",
-          "ok": true,
-          "tags": [
-            "booking.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1317,
-                  "errors": [],
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-30T16:37:29.095Z",
+                  "startTime": "2024-12-31T11:46:11.108Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-5df9e--abridgwater2k-booking-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-9ea9c566edcd30e40ecb",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Lammond (lclowes2l@harvard.edu)",
-          "ok": true,
-          "tags": [
-            "harvard.edu)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1461,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:29.252Z",
-                  "attachments": [
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-contraseña-muy-corta-chromium/test-failed-1.png"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Lammond-lclowes2l-harvard-edu--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-f7a05778b14d36e8f27c",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Pietra (panneslie2n@sun.com)",
-          "ok": true,
-          "tags": [
-            "sun.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1403,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:29.432Z",
-                  "attachments": [
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-contraseña-muy-corta-chromium/video.webm"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Pietra-panneslie2n-sun-com--chromium/test-finished-1.png"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-contraseña-muy-corta-chromium/trace.zip"
                     }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-194b786a777c97c437d9",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Rhianon (rrowland2o@artisteer.com)",
-          "ok": true,
-          "tags": [
-            "artisteer.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 67,
+                    "line": 55
+                  }
+                },
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1372,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:30.415Z",
-                  "attachments": [
+                  "workerIndex": 7,
+                  "status": "failed",
+                  "duration": 6085,
+                  "error": {
+                    "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:55:67",
+                    "matcherResult": {
+                      "name": "toHaveAttribute",
+                      "expected": "true",
+                      "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
+                      "pass": false,
+                      "actual": null,
+                      "log": [
+                        "  - expect.toHaveAttribute with timeout 5000ms",
+                        "  - waiting for locator('input[placeholder=\"Contraseña\"]')",
+                        "    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>",
+                        "      - unexpected value \"null\""
+                      ],
+                      "timeout": 5000
+                    },
+                    "location": {
+                      "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                      "column": 67,
+                      "line": 55
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 53 |\u001b[39m     \n \u001b[90m 54 |\u001b[39m     \u001b[90m// Verifica mensaje de error de contraseña\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-de27a-n-rrowland2o-artisteer-com--chromium/test-finished-1.png"
+                      "location": {
+                        "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                        "column": 67,
+                        "line": 55
+                      },
+                      "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('input[placeholder=\"Contraseña\"]')\nExpected string: \u001b[32m\"true\"\u001b[39m\nReceived string: \u001b[31m\"\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveAttribute with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('input[placeholder=\"Contraseña\"]')\u001b[22m\n\u001b[2m    9 × locator resolved to <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Contraseña\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 53 |\u001b[39m     \n \u001b[90m 54 |\u001b[39m     \u001b[90m// Verifica mensaje de error de contraseña\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[placeholder=\"Contraseña\"]'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'aria-invalid'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js:55:67\u001b[22m"
                     }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-8b298706289e74f45d43",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Garrard (gbarfitt2p@artisteer.com)",
-          "ok": true,
-          "tags": [
-            "artisteer.com)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 1365,
-                  "errors": [],
+                  ],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:30.717Z",
+                  "retry": 1,
+                  "startTime": "2024-12-31T11:46:18.152Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-u-6af8e-d-gbarfitt2p-artisteer-com--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-60bb66d8bba6e0e0820b",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Tanya (tbelward2q@yale.edu)",
-          "ok": true,
-          "tags": [
-            "yale.edu)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 1369,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:30.840Z",
-                  "attachments": [
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-contraseña-muy-corta-chromium-retry1/test-failed-1.png"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Tanya-tbelward2q-yale-edu--chromium/test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a17d344665b7769027ce-466e5d79988a91ea55d1",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
-        },
-        {
-          "title": "Login test for user Kristel (kaudibert2r@dmoz.org)",
-          "ok": true,
-          "tags": [
-            "dmoz.org)"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1342,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-12-30T16:37:31.793Z",
-                  "attachments": [
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-contraseña-muy-corta-chromium-retry1/video.webm"
+                    },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo-Login-test-for-user-Kristel-kaudibert2r-dmoz-org--chromium/test-finished-1.png"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/samedi/Documents/GitHub/playwright_login/test-results/loginDemo2-login-con-contraseña-muy-corta-chromium-retry1/trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/samedi/Documents/GitHub/playwright_login/test/loginDemo2.spec.js",
+                    "column": 67,
+                    "line": 55
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "a17d344665b7769027ce-708a695c8df6775924b6",
-          "file": "loginDemo.spec.js",
-          "line": 21,
-          "column": 9
+          "id": "53707008e07706c1acea-1f3af237528f30fd5969",
+          "file": "loginDemo2.spec.js",
+          "line": 48,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-30T16:36:48.843Z",
-    "duration": 44424.308,
-    "expected": 85,
+    "startTime": "2024-12-31T11:45:53.892Z",
+    "duration": 30812.932,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 4,
     "flaky": 0
   }
 }
